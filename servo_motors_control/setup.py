@@ -9,7 +9,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, ['package.xml', 'servo_motors_control.launch.py']),
     ],
     install_requires=[
         'setuptools',
@@ -30,7 +30,7 @@ setup(
     entry_points={
         'console_scripts': [
             'key_control = ' + package_name + '.key_control:main',
-            'forward_reverse_control = ' + package_name + '.forward_reverse_control:main',
+            'servo_control = ' + package_name + '.servo_control:main',
         ],
     },
 )
